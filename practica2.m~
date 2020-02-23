@@ -1,6 +1,6 @@
 clear all; close all; clc;
 
-t=0:1/1e8:0.0048;
+t=0:1/1e7:0.0048;
 
 % Señal x de t
 x =20.*sin(1600.*pi.*t) + 2.*sin(2700.*pi.*t) + 0.15.*sin(5000.*pi.*t) + 0.003.*cos(1500.*pi.*t) + 0.01.*cos(6000.*pi.*t);
@@ -44,31 +44,8 @@ grid on;
 xlim([-1 1])
 ylim([-1 1])
 hold on
-
-plot([-1 1],[Fx_c(1) Fx_c(1)],'g')
-plot(xn_c(1),Fx_c(1),'ro')
-
-plot([-1 1],[Fx_c(8) Fx_c(8)],'g')
-plot(xn_c(8),Fx_c(8),'ro')
-
-plot([-1 1],[Fx_c(16) Fx_c(16)],'g')
-plot(xn_c(16),Fx_c(16),'ro')
-
-plot([-1 1],[Fx_c(24) Fx_c(24)],'g')
-plot(xn_c(24),Fx_c(24),'ro')
-
-plot([-1 1],[0 0],'b')
-
-
-plot([-1 1],[Fx_c(40) Fx_c(40)],'g')
-plot(xn_c(40),Fx_c(40),'ro')
-
-plot([-1 1],[Fx_c(48) Fx_c(48)],'g')
-plot(xn_c(48),Fx_c(48),'ro')
-
-plot([-1 1],[Fx_c(56) Fx_c(56)],'g')
-plot(xn_c(56),Fx_c(56),'ro')
-
-plot([-1 1],[Fx_c(64) Fx_c(64)],'g')
-plot(xn_c(64),Fx_c(64),'ro')
+plot(xn_c(8),Fx_c(8),'r*')
+plot(xn_c(16),Fx_c(16),'r*')
+plot(xn_c(24),Fx_c(24),'r*')
+plot(xn_c(33),Fx_c(3),'r*')
 
