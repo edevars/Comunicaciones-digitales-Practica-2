@@ -34,25 +34,11 @@ grid on;
 xlim([-1 1])
 ylim([-1 1])
 
-n = 0.25;
 
-c = zeros(1,65);
-r = zeros(1,65);
-
-for i = -32:32
-    
-    n = i./32; 
-    k = find(abs(F_x-n) < 0.01);
-    [val,idx]=min(abs(k-n));
-    minIndex=k(idx);
-    
-    c(i+33) = F_x(minIndex);
-    r(i+33) = xn(minIndex);
-end
-
+[xn_c, Fx_c] = codificar(F_x,xn);
 
 subplot(1,2,2);
-stairs(r,c);
+stairs(xn_c,Fx_c);
 title('F_{\mu}(x) Codificada', 'Interpreter','tex');
 grid on;
 xlim([-1 1])
