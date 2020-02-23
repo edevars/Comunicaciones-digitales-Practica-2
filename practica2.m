@@ -35,7 +35,7 @@ xlim([-1 1])
 ylim([-1 1])
 
 
-[xn_c, Fx_c] = codificar(F_x,xn);
+[xn_c, Fx_c, dicc] = codificar(F_x,xn);
 
 subplot(1,2,2);
 stairs(xn_c,Fx_c);
