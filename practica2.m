@@ -72,3 +72,26 @@ plot(xn_c(56),Fx_c(56),'ro')
 plot([-1 1],[Fx_c(64) Fx_c(64)],'g')
 plot(xn_c(64),Fx_c(64),'ro')
 
+
+figure(3)
+
+F_y = sign(F_x).*(1/u).*((1+u).^abs(F_x) - 1);
+
+plot(F_x,F_y);
+title("F_{\mu}^{-1}(y) Expansión", 'Interpreter','tex')
+grid on;
+xlim([-1 1])
+ylim([-1 1])
+
+figure(4)
+
+x_t = F_y.*abs(max(x));
+
+plot(t,x_t);
+title("F_{\mu}^{-1}(y) multiplicada por |X(t)|_{max}", 'Interpreter','tex')
+grid on;
+
+
+
+
+
